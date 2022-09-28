@@ -83,3 +83,19 @@ Ennemy.prototype.move = function () {
     light1.position.y = this.position.y;
    //light1.position.z = this.graphic.position.z + 500;
 };
+
+function ennemy_collision()
+{
+    var x = ennemy.graphic.position.x + WIDTH / 2;
+    var y = ennemy.graphic.position.y + HEIGHT / 2;
+
+    if ( x > WIDTH )
+        ennemy.turnLeft(Math.random(6));
+    if ( y < 0 )
+        ennemy.turnLeft(Math.random(6));
+    if ( y > HEIGHT )
+        ennemy.turnLeft(Math.random(6));
+    if ( x < 0 )
+        ennemy.turnLeft(Math.random(6));
+
+}
